@@ -1,0 +1,343 @@
+@font-face {
+    font-family: hFont;
+    src: url(../fonts/Lobster-Regular.ttf);
+  }
+  @font-face {
+    font-family: pFont;
+    src: url(../fonts/PoiretOne-Regular.ttf);
+  }
+  @font-face {
+    font-family: pxFont;
+    src: url(../fonts/Rajdhani-Medium.ttf);
+  }
+
+body{
+    /* background-color: #ff5464; */
+    background-image: url("../imgs/bg12.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+input.form-control:focus,button:focus{
+    box-shadow: none;
+    border-color:  #fcd2d5;
+    outline: unset;
+}
+.alert{
+    font-family:pxfont;
+}
+/***********************************************************************/
+
+/**Header**/
+header nav{
+    background-color: #fff;
+    border-bottom: 1px solid #fdd3d6;
+}
+ header nav ul a{font-family: pxfont;}
+ header nav .logo{font-family: hfont;}
+ header nav .logicon{
+    float: right;
+    font-size: 20px;
+    margin-top: 2px;
+ }
+ header nav ul .dropdown-menu{
+    min-width: 8rem;
+ }
+
+
+
+.reg-log{
+    transform: translate(13%, 50%);
+    height: 500px;
+    /* background-image: url("../imgs/bg11.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
+    width: 80%;
+    box-shadow: 0px 0px 45px -17px #000;
+    border-radius:20px;
+
+
+
+}
+
+.reg-log .overlay{
+    width: 40%;
+    transition: all .3s;
+    z-index: 999;
+    border-radius: 20px 0px 0px 20px;
+    background-image: url("../imgs/bg12.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-attachment: fixed; */
+
+}
+.reg-log .overlay div{ padding: 150px 40px; }
+.reg-log .overlay::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fdd3d670;
+}
+.reg-log .overlay span{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border:.5px solid #eee;
+    background: #fff;
+    right: -23px;
+    top: 45%;
+    
+}
+.reg-log .overlay span .ico{
+    color: #000;
+    margin: 16px 16px;
+    cursor: pointer;
+}.reg-log .overlay span:nth-of-type(2){
+    display: none;
+}
+
+.reg-log .overlay h4{
+font-family: hFont;
+color:#000;
+}
+.reg-log .overlay p{
+    font-family: pxFont;
+color:#797979;
+
+}
+.reg-log .login,.reg-log .register{
+    width: 60%;
+    padding: 100px;
+    height: 100%;
+    transition: all .3s;
+    background-color:#fff;
+    border-radius: 0px 20px 20px 0px;
+
+}
+
+.reg-log .register{
+    z-index: -1;
+    border-radius: 20px;
+    right: 0px;
+}
+.reg-log .login h3,.reg-log .register h3{
+    font-family: hFont;
+    text-transform: capitalize;
+}
+ input.form-control{
+border-radius: 0;
+font-size:15px;
+font-family: pxFont;
+}
+.icform{
+    position: relative;
+    top: 30px;
+    left: 310px;
+
+}
+button {
+    border: 1px solid #ff6671;
+    background-color: unset;
+    padding: 5px 25px;
+    font-family: pFont;
+    font-weight: bold;
+    border-color:#797979;
+    color: #797979;
+    overflow: hidden;
+}
+button:hover{
+    color:#ff6671;
+    border-color:#ff6671;
+    /* z-index: 1; */
+}
+button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    right: 0;
+    bottom: 0;
+    background-color: #ff6671;
+    transition: .3s;
+    
+    
+
+}
+ button:hover::after{left: 0; right: 95%;}
+
+/********************************************************************************/
+/*admin page*/
+.group-page,.add-member,.member{
+    background-color: rgb(253 211 214 / 77%);
+    box-shadow: 0px 0px 45px -17px #000;
+
+}
+.group-page .group-form,.add-member .add-member-form,.member .member-form{
+    box-shadow: 0px 0px 45px -25px #000;
+    background-color: #fff;
+    width: 25%;
+}
+/********** responsev form ***************/
+@media screen and (max-width: 800px) {
+    .group-page .group-form,.add-member .add-member-form,.member .member-form{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    .group-page .group-form,.add-member .add-member-form,.member .member-form{
+        width: 50%;
+    }
+}
+/************************************************/
+.group-page .group-form label,.add-member .add-member-form label,.member .member-form label{
+    font-size: 20px;
+    cursor: pointer;
+    font-family: hfont;
+    transition: .3s;
+}
+.group-page .group-form label span,
+.add-member .add-member-form label span,
+.member .member-form label span{
+    font-size:12px;
+
+}
+.group-page .group-form label:hover,
+.add-member .add-member-form label:hover,
+.member .member-form label:hover{
+    color: #ff8e99;
+}
+.group-page h4,.add-member h4,.member h4,.banners h4{
+    color: #383434;
+    font-family: hfont;
+}
+/*** groups**/
+
+.group-page .groups{
+    background-color: #fff;
+    min-height: 350px;
+}
+.group-page .groups figure{border: 1px solid #ddd; transition: all .3s;}
+.group-page .groups figure:hover{
+    box-shadow: 0px 0px 45px -25px #000;
+}
+.group-page .groups figure .del-group{
+    overflow: hidden;
+    right: 5px;
+    top: 5px;
+    padding-top: 3px;
+    color: #bd2130;
+    background: #ececec;
+    border-radius: 50%;
+    transition: all .2s;
+    height: 0px;
+    width: 0px;
+}
+.group-page .groups figure:hover .del-group{
+    height: 30px;
+    width: 30px;
+}
+.group-page .groups figure .g-banner img{
+    max-height: 100px;
+    min-height: 100px;
+    min-width: 100%;
+}
+.group-page .groups figure figcaption{min-height: 100px;}
+.group-page .groups figure figcaption .g-name h5 a{
+    font-family: pfont;
+    font-weight: bolder;
+    color: #000;
+    transition: .3s;
+}
+.group-page .groups figure figcaption .g-name h5 a:hover{
+    color: #ff6671;
+}
+.group-page .groups figure figcaption .g-id{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0;
+}
+.group-page .groups figure figcaption .g-id p{
+    background: #dedede;
+    font-family: pxfont;
+    font-size: 18px;
+    color: #bd2130;
+}
+
+/********************************************************************************/
+/*group page*/
+.add-member .add-member-form button,.member .member-form button{
+    right: -28%;
+}
+.add-member .members-imgs,.member .members{
+    background-color: #fff;
+    min-height: 350px;
+}
+.add-member .members-imgs .img-container,.member .members .img-container{
+    transition: all .5s ;
+    max-height: 170px;
+}
+.add-member .members-imgs .img-container:hover,.member .members .img-container:hover{
+    box-shadow: 0px 0px 12px -2px #000000;
+}
+.add-member .members-imgs .del-img{
+    padding-top: 3px;
+    color: #bd2130;
+    background: #ececec;
+    border-radius: 50%;
+    transition: all .2s;
+    height: 30px;
+    width: 30px;
+    right: -25%;
+    top: 7%;
+}
+.add-member .members-imgs .img-container:hover .del-img{
+    right: 6%;
+}
+/************************* banners page ***************/
+
+/* .banners .group::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(0 0 0 / 48%);
+} */
+
+.banners .group:hover img{
+    transform: scale(1.2);
+    opacity: 1;
+}
+.banners .group img{
+    max-height: 250px;
+    min-height: 250px;
+    transition: all .5s;
+    opacity: .5;
+}
+.banners .group h4{
+    color:#bd2130;
+    font-family: hfont;
+    left: 2%;
+    top: 2%;
+}
+.all-imgs {
+    border: 1px solid;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.all-imgs img{
+     width: calc(100%/13); 
+    height: calc(100%/7);
+
+}
+.bnnImg{
+    display: none;
+}
